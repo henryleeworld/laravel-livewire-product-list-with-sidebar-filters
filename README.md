@@ -35,5 +35,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/2Iifmko.gif)
+![](https://i.imgur.com/KlTY6tM.gif)
 > 減少消費者無法快速找到感興趣商品的情況發生

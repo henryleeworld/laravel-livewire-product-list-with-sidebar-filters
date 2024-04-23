@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Category;
 use App\Models\Manufacturer;
 use App\Services\PriceService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
+use Livewire\Component;
 
 class Sidebar extends Component
 {
@@ -22,7 +22,7 @@ class Sidebar extends Component
 
     public function updatedSelected(): void
     {
-        $this->emit('updatedSidebar', $this->selected);
+        $this->dispatch('updatedSidebar', $this->selected);
     }
 
     public function render(PriceService $priceService): View

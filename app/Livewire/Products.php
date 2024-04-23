@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
+use Livewire\Component;
 
 class Products extends Component
 {

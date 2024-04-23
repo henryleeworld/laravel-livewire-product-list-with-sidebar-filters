@@ -17,7 +17,7 @@
         >
             @foreach($prices as $index => $price)
                 <div>
-                    <input type="checkbox" id="price{{ $index }}" value="{{ $index }}" wire:model="selected.prices">
+                    <input type="checkbox" id="price{{ $index }}" value="{{ $index }}" wire:model.live="selected.prices">
                     <label for="price{{ $index }}">
                         {{ __($price['name']) }} ({{ $price['products_count'] }}) </label>
                 </div>
