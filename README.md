@@ -1,4 +1,4 @@
-# Laravel 10 Livewire 透過側邊欄篩選器篩選產品清單
+# Laravel 11 Livewire 透過側邊欄篩選器篩選產品清單
 
 如要縮小搜尋範圍，請使用側邊欄選單上的篩選器，透過使用側邊欄中的篩選器去篩選並呈現出不一樣的搜尋結果，更快速地找出感興趣的商品。
 
@@ -35,5 +35,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/KlTY6tM.gif)
+![](https://i.imgur.com/HGgZyYt.gif)
 > 減少消費者無法快速找到感興趣商品的情況發生

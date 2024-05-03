@@ -11,8 +11,8 @@
         search: '',
         startIndex: {{ $startIndex }},
         endIndex: {{ $endIndex }},
-        options: @entangle($options),
-        selected: @entangle($selected),
+        options: @entangle($options).live,
+        selected: @entangle($selected).live,
         get searchResults() {
             return this.options.filter(
                 i => i.name.toLowerCase().includes(this.search.toLowerCase())
