@@ -8,17 +8,21 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Manufacturer extends Model
 {
+    /** @use HasFactory<\Database\Factories\ManufacturerFactory> */
     use HasFactory;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
         'name',
     ];
 
+    /**
+     * Get the products for the manufacturer.
+     */
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);

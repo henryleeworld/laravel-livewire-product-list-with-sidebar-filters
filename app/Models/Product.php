@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,12 +10,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
+    /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
         'name',
@@ -31,12 +33,16 @@ class Product extends Model
         'More than 500',
     ];
 
+    /**
+     * Get the category that owns the product.
+     */
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function scopeWithFilters(Builder $query, array $prices, array $categories, array $manufacturers)
+    #[Scope]
+    protected function withFilters(Builder $query, array $prices, array $categories, array $manufacturers)
     {
         return $query->when(count($manufacturers), function (Builder $query) use ($manufacturers) {
             $query->whereIn('manufacturer_id', $manufacturers);

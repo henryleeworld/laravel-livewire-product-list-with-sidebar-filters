@@ -2,7 +2,7 @@
     @foreach($products as $product)
         <div class="w-1/3 p-3">
             <div class="rounded-md">
-                <a href="#"><img src="https://placehold.it/700x400" alt=""></a>
+                <a href="#"><img src="https://dummyimage.com/700x400" alt=""></a>
                 <div class="mt-3">
                     <a href="#" class="text-2xl text-indigo-500 hover:underline">{{ $product->name }}</a>
                 </div>

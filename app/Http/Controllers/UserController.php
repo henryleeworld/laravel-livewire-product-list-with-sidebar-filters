@@ -7,6 +7,9 @@ use Illuminate\View\View;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index(): View
     {
         $users = User::paginate();

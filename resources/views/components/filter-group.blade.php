@@ -37,7 +37,7 @@
          x-transition:enter.duration.500ms
          x-transition:leave.duration.500ms
     >
-        <input x-model="search" class="mb-2 w-full rounded-md border border-gray-400 px-2 py-1 text-sm" placeholder="Search for {{ strtolower($title) }}">
+        <input x-model="search" class="mb-2 w-full rounded-md border border-gray-400 px-2 py-1 text-sm" placeholder="{{ __('Search for ') . strtolower($title) }}">
         <template x-if="search.length > 0">
             <div>
                 <template x-for="(option, index) in searchResults" :key="option.id">
