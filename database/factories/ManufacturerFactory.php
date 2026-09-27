@@ -2,8 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Manufacturer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<Manufacturer>
+ */
 class ManufacturerFactory extends Factory
 {
     /**

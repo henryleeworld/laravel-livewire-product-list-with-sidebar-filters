@@ -4,18 +4,18 @@ namespace App\Livewire;
 
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class Products extends Component
 {
-    protected $selected = [
+    protected array $selected = [
         'prices'        => [],
         'categories'    => [],
         'manufacturers' => []
     ];
 
-    protected $listeners = ['updatedSidebar' => 'setSelected'];
-
+    #[On('updatedSidebar')]
     public function setSelected($selected): void
     {
         $this->selected = $selected;
